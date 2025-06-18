@@ -1,0 +1,87 @@
+.todoWeek {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .todoWeek {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+}
+
+.todoDay {
+  justify-self: stretch;
+  text-align: center;
+  font-family: Handlee;
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 0.5rem 0;
+  border: 2px solid var(--color600);
+  background-color: var(--color100);
+}
+
+.todoDay0 {
+  background-color: var(--color200);
+  border: 1px dashed var(--color600);
+}
+
+.todoDay1 {
+  background-color: var(--color300);
+  border: 1px dashed var(--color600);
+}
+
+.todoTask {
+  border: 1px dotted #444;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 1%;
+  width: 97%;
+  box-sizing: border-box;
+}
+
+.todoTask:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+  transform: translate3d(1px, 1px, 0);
+}
+
+/*
+.todoCategory0{
+    background-color: #FFF;
+}
+
+.todoCategory1{
+    background-color: #EEE;
+}
+
+.todoCategory2{
+    background-color: #DDD;
+}
+*/
+.todoTaskName {
+  font-family: Handlee;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.todoTaskDesc {
+  font-family: Handlee;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.todoTaskDone {
+  text-decoration: line-through;
+}
+
+.taskDoneBtn {
+  opacity: 0.3;
+}
+
+.todayHead {
+  background-color: rgba(247, 214, 84, 0.2);
+  box-shadow: 2px 2px 10px 2px rgba(247, 214, 84, 0.5);
+  text-decoration: underline;
+}

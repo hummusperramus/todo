@@ -1,0 +1,51 @@
+:root {
+  --color100: #fafaf9;
+  --color200: #f3f2ef;
+  --color300: #e9e5df;
+  --color400: #d6cec2;
+  --color500: #b9af9f;
+  --color600: #958b7b;
+  --color700: #6e6558;
+  --color800: #474139;
+  --color900: #211f1c;
+}
+
+@font-face {
+  font-family: Handlee;
+  src: url("../font/Handlee-Regular.ttf");
+}
+
+#filter,
+#root {
+  background-color: var(--color400);
+  height: 100vh;
+  width: 100vw;
+}
+
+.todoContainer {
+  display: grid;
+  grid-template-rows: min-content auto;
+  height: 100%;
+  width: 100%;
+  overflow: clip;
+}
+
+.todoContents {
+  display: grid;
+  grid-template-columns: min-content auto;
+  height: 100%;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .todoContents {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: unset;
+  }
+  .todoContainer {
+    display: block;
+    overflow: auto;
+  }
+}
